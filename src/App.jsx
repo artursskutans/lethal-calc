@@ -27,7 +27,7 @@ function App() {
     // Check if parsing is successful, and calculate the result
     if (!isNaN(numericProfit) && !isNaN(numericQuota)) {
       const calculatedResult = (5 * numericProfit + numericQuota + 75) / 6;
-      setResult(Math.round(calculatedResult));
+      setResult(Math.ceil(calculatedResult));
     } else {
       console.error("Invalid input. Please enter valid numeric values.");
       setResult("Error");
