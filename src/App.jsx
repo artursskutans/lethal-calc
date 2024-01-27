@@ -69,18 +69,16 @@ function App() {
                 color: "red",
                 fontSize: 32,
               },
-              "& .MuiInputLabel-root": {
-                color: "red", // Set label color (optional)
-              },
               "& .MuiOutlinedInput-notchedOutline": {
                 borderColor: "red", // Set your desired border color
                 "&:hover": {
                   borderColor: "red",
                 },
               },
-              "&:hover .MuiOutlinedInput-notchedOutline": {
-                borderColor: "red", // Set the border color on hover
-              },
+              "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
+                {
+                  borderColor: "red",
+                },
               "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
                 {
                   borderColor: "red", // Set the border color when focused
@@ -117,6 +115,10 @@ function App() {
                   borderColor: "red",
                 },
               },
+              "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
+                {
+                  borderColor: "red",
+                },
               "&:hover .MuiOutlinedInput-notchedOutline": {
                 borderColor: "red", // Set the border color on hover
               },
