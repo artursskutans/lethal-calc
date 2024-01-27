@@ -74,6 +74,9 @@ function App() {
               },
               "& .MuiOutlinedInput-notchedOutline": {
                 borderColor: "red", // Set your desired border color
+                "&:hover": {
+                  borderColor: "red",
+                },
               },
               "&:hover .MuiOutlinedInput-notchedOutline": {
                 borderColor: "red", // Set the border color on hover
@@ -110,6 +113,9 @@ function App() {
               },
               "& .MuiOutlinedInput-notchedOutline": {
                 borderColor: "red", // Set your desired border color
+                "&:hover": {
+                  borderColor: "red",
+                },
               },
               "&:hover .MuiOutlinedInput-notchedOutline": {
                 borderColor: "red", // Set the border color on hover
