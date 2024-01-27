@@ -32,7 +32,7 @@ function App() {
 
     // Start with an initial guess for y
     let y = 0;
-    let epsilon = 0.0001; // Tolerance for the loop
+    let epsilon = 0.0000001; // Tolerance for the loop
 
     // Use a loop to refine the value of y
     while (true) {
