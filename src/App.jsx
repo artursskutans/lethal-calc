@@ -21,17 +21,34 @@ function App() {
 
   const calculateProfit = () => {
     // Parse the string inputs to integers
-    const numericProfit = parseInt(profit, 10);
-    const numericQuota = parseInt(quota, 10);
+    const r = parseInt(profit, 10);
+    const q = parseInt(quota, 10);
 
-    // Check if parsing is successful, and calculate the result
-    if (!isNaN(numericProfit) && !isNaN(numericQuota)) {
-      const calculatedResult = (5 * numericProfit + numericQuota + 75) / 6;
-      setResult(Math.ceil(calculatedResult));
-    } else {
-      console.error("Invalid input. Please enter valid numeric values.");
-      setResult("Error");
+    function calculateX(y, q) {
+      let x = (y - q) / 5 - 15;
+      // Ensure x is not smaller than 0
+      return Math.max(x, 0);
     }
+
+    // Start with an initial guess for y
+    let y = 0;
+    let epsilon = 0.0001; // Tolerance for the loop
+
+    // Use a loop to refine the value of y
+    while (true) {
+      let currentR = calculateX(y, q) + y;
+      let difference = Math.abs(currentR - r);
+
+      // Check if the current value of y satisfies the equation within the tolerance
+      if (difference < epsilon) {
+        break;
+      }
+
+      // Update y for the next iteration
+      y = y - (currentR - r);
+    }
+
+    setResult(Math.ceil(y));
   };
 
   return (
