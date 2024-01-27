@@ -151,7 +151,7 @@ function App() {
           Calculate
         </Button>
         <Typography sx={{ fontFamily: "PerfectDOS", fontSize: 32 }}>
-          Result:
+          Loot to sell:
         </Typography>
         <Typography sx={{ fontFamily: "PerfectDOS", fontSize: 72 }}>
           {result !== null ? result : ""}
